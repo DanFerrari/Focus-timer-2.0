@@ -1,0 +1,41 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  font-size: 62.5%;
+
+  --color-primary:hsla(240, 6%, 21%, 1);
+  --color-selected:hsla(194, 97%, 31%, 1);
+  --color-selected-icon:#FFFFFF;
+  --color-back-buttons:hsla(240, 9%, 89%, 1);
+  --color-back-buttons-hover:hsla(240, 9%, 89%, 0.74);
+
+  
+
+  
+}
+
+
+[type="range"]{
+  appearance: none;
+  display: block;
+  background-color:black;
+  border-radius: 1rem;
+  width:9rem;
+  height: 4px;
+  cursor: pointer;
+  
+  
+  }
+  
+  [type="range"]::-webkit-slider-thumb{
+    appearance: none;
+    display: block;
+    width:16px;
+    height: 16px;
+    background-color: black;
+    border-radius: 100%;
+  }
+  

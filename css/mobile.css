@@ -1,0 +1,103 @@
+@import url('config.css');
+@import url('darkmod.css');
+@media (max-width:480px){
+
+
+.hide{
+  display: none;
+}
+
+html,body{
+  overflow: hidden;
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+}
+main{
+  width: 100%;
+  height: 100%;
+  display: grid;
+
+}
+.controlTime{
+  
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content:end;
+  gap: 5rem;
+}
+.time{
+  font-size: clamp(6rem,6rem + 5vw,14rem);
+  font-family: 'Roboto',sans-serif;
+  color: var(--color-primary);
+
+}
+
+.control{
+  display:flex;
+  gap:0.5rem;
+  justify-content: space-evenly;
+}
+.control button{
+  width:clamp(4.4rem,5rem,6rem);
+  height: 6.4rem;
+  background: transparent;
+  border:none;
+}
+
+.sons{
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+}
+
+.sons button{
+  border-radius: 2.4rem;
+  border: none;
+  
+  width:10rem;
+  
+  justify-self: center;
+  }
+
+
+.check{
+  background: var(--color-selected);
+}
+
+
+.check svg path {  
+  fill: white;
+  
+}
+
+.a,.b,.c,.d{
+  position: relative;
+
+  display: grid;
+  width:clamp(10rem,10rem + 2vw,12rem);
+  justify-self: center;
+
+}
+.a [type="range"],.b [type="range"],.c [type="range"],.d [type="range"]
+{
+  position: absolute;
+  justify-self: center;
+  bottom: 0;
+  margin-bottom: 2rem;
+  width: 7rem;
+}
+
+
+
+
+}
