@@ -16,62 +16,40 @@ volRain.value = 0
 volCoffee.value = 0
 volFireplace.value = 0
 
-
-
-
-
-  function updateVol(volItem){
-
-let vol = volItem.value;
-
+function updateVol(volItem){
+  let vol = volItem.value;
   let volUpdate = vol/100
-
-  
-  
   return volUpdate
-
-
 }
 
+function VolumeSound(event,sound,vol){
+  vol.addEventListener('mousemove',function(){
+      
+    if(event.classList.contains('check') == false){
+      sound.pause()
+      vol.value = 0
+     return
+    } 
+    sound.volume = updateVol(vol)
+    sound.play()
 
+    sound.loop = true
 
-function mouseVol(volItem,Sound){
-
-
-  volItem.addEventListener('mousemove',function(){
-    
-    
-    Sound.volume = updateVol(volItem)
-    Sound.pause()
-    Sound.play() 
-    
-    
-    
-    
-  })
-
-}
-
-
-
-
-
-
+})
+ }
 
 
     forest.addEventListener('click',function change(){
       const ft = forest.classList.toggle('check')
       const wr = body.classList.toggle('input-A')
 
-      
-
 
       volForest.value = 50
-      
-      mouseVol(volForest,forestSound)
       forestSound.volume = updateVol(volForest)
+     forestSound.play() 
       
-
+      
+     forestSound.volume = updateVol(volForest)
 
       if(ft == false){
         forestSound.pause()
@@ -79,18 +57,14 @@ function mouseVol(volItem,Sound){
        return
       }
      
-
-
-     
-     forestSound.play() 
-      
       forestSound.loop = true
 
- })
+      VolumeSound(forest,forestSound,volForest)
+   
 
-  
 
 
+    })
 
     rain.addEventListener('click',function change(){
        const rn = rain.classList.toggle('check')
@@ -106,8 +80,9 @@ function mouseVol(volItem,Sound){
         return
       }
 
+      rainSound.loop = true
      
-      mouseVol(volRain,rainSound)
+      VolumeSound(rain,rainSound,volRain)
       
 
     })
@@ -126,8 +101,10 @@ function mouseVol(volItem,Sound){
         return
       }
 
-      mouseVol(volCoffee,coffeeSound)
 
+      coffeeSound.loop = true
+
+      VolumeSound(coffee,coffeeSound,volCoffee)
 
 
     })
@@ -149,13 +126,13 @@ function mouseVol(volItem,Sound){
 
       }
 
-      mouseVol(volFireplace,fireplaceSound)
+      fireplaceSound.loop = true
+
+      VolumeSound(fireplace,fireplaceSound,volFireplace)
     })
 
     
  
-    
-  
 
 
 
