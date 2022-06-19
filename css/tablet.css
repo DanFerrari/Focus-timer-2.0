@@ -48,8 +48,8 @@ main{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content:end;
-  gap: 5rem;
+  justify-content:center;
+  gap: 2rem;
 
 }
 
@@ -75,7 +75,7 @@ main{
 .sons{
  
   
-  padding: 2rem;
+  padding-bottom: 5rem;
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
@@ -97,8 +97,10 @@ main{
   position: relative;
 
   display: grid;
-  width:15rem;
+  width:13rem;
+  height: 15rem;
   justify-self: center;
+  align-self: start;
 
 }
 .a [type="range"],.b [type="range"],.c [type="range"],.d [type="range"]

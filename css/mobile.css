@@ -28,7 +28,7 @@ main{
   height: 100%;
   width: 100%;
   align-items: center;
-  justify-content:end;
+  justify-content:center;
   gap: 5rem;
 }
 .time{
@@ -58,14 +58,13 @@ main{
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 1rem;
+  background-color: aqua;
+  
 }
 
 .sons button{
   border-radius: 2.4rem;
   border: none;
-  
-  width:10rem;
-  
   justify-self: center;
   }
 
@@ -82,7 +81,7 @@ main{
 
 .a,.b,.c,.d{
   position: relative;
-
+  height: 10rem;
   display: grid;
   width:clamp(10rem,10rem + 2vw,12rem);
   justify-self: center;
@@ -93,7 +92,7 @@ main{
   position: absolute;
   justify-self: center;
   bottom: 0;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   width: 7rem;
 }
 
